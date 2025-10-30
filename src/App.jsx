@@ -4,7 +4,7 @@ import Routing from './Router.jsx';
 import { DataContext } from './Components/DataProvider/DataProvider';
 
 // Match exact filename and folder case
-import { Type } from './utility/action.type.js';
+import { Type } from './utility/actionType.js';
 import { auth } from './utility/firebase.js';
 
 
