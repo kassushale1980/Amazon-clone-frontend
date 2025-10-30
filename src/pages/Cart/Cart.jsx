@@ -5,7 +5,7 @@ import ProductCard from '../../Components/Product/ProductCard';
 import { Link } from 'react-router-dom';
 import CurrencyFormat from '../../Components/CurrencyFormat/CurrencyFormat';
 import classes from './Cart.module.css'
-import { Type } from '../../Utility/action.type';
+import { Type } from '../../utility/action.type';
 import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
 
