@@ -7,7 +7,7 @@ import { useElements, useStripe, CardElement } from '@stripe/react-stripe-js';
 import CurrencyFormat from '../../Components/CurrencyFormat/CurrencyFormat';
 import axiosInstance from "../../Api/Axios.js";
 
-import { Type } from "../../utility/action.type.js"; // ✅ added
+import { Type } from "../../utility/actionType.js"; // ✅ added
 import {db} from "../../utility/firebase.js"
 import { useNavigate } from 'react-router-dom';
 

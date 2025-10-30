@@ -1,6 +1,7 @@
 
 
-import { Type } from './action.type'
+import { Type } from './actionType.js';
+
 import { useReducer } from 'react'
 
 export const initialState = {
