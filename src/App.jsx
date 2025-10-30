@@ -1,9 +1,13 @@
 import './App.css';
-import {useContext,useEffect} from 'react'
-import Routing from './Router.jsx'
-import {DataContext} from './Components/DataProvider/DataProvider'
-import {Type} from './utility/action.type.js'
-import {auth} from './utility/firebase.js'
+import { useContext, useEffect } from 'react';
+import Routing from './Router.jsx';
+import { DataContext } from './Components/DataProvider/DataProvider';
+
+// Match exact filename and folder case
+import { Type } from './utility/action.type.js';
+import { auth } from './utility/firebase.js';
+
+
 
 
 function App() {
