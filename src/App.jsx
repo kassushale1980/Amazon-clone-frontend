@@ -2,44 +2,29 @@ import './App.css';
 import { useContext, useEffect } from 'react';
 import Routing from './Router.jsx';
 import { DataContext } from './Components/DataProvider/DataProvider';
-
-// Match exact filename and folder case
-import { Type } from './utility/actionType.js';
-import { auth } from './utility/firebase.js';
-
-
-
+import { Type } from './utility/actionType.js';// ✅ matches actual file
+import { auth } from './utility/firebase.js';   // ✅ matches actual file
 
 function App() {
-const [{user},dispatch] = useContext(DataContext)
+  const [{ user }, dispatch] = useContext(DataContext);
 
-useEffect(()=>{
-  auth.onAuthStateChanged((authUser)=>{
-    if(authUser){
-      // console.log(authUser)
-      dispatch({
-        type: Type.SET_USER,
-        user: authUser
-      })
-    }else{
-      dispatch({
-        type: Type.SET_USER,
-        user: null
-      })
-    }
-     }) 
+  useEffect(() => {
+    auth.onAuthStateChanged((authUser) => {
+      if (authUser) {
+        dispatch({
+          type: Type.SET_USER,
+          user: authUser,
+        });
+      } else {
+        dispatch({
+          type: Type.SET_USER,
+          user: null,
+        });
+      }
+    });
+  }, []);
 
-
-
-},[])
-
- return (
-   <Routing/>
-    );
+  return <Routing />;
 }
 
 export default App;
-
-
-
-
